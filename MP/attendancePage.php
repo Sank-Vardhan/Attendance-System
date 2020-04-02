@@ -5,8 +5,9 @@
     {
         header('Location:./index.php');
     }
-    echo "Welcome ".$_SESSION['loginId'] .$_SESSION['loginId1'];
+    echo "Welcome ".$_SESSION['loginId']."_".$_SESSION['loginId1']."<br>";
 ?>
+
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -26,12 +27,20 @@
             function getLocation(){
                 
                 var x = document.getElementById("demo");
+                var empLoc={};
                 
                 function getCoordinates(position) {
-                    const latitude  = position.coords.latitude;
-                    const longitude = position.coords.longitude;
+                    const lat  = position.coords.latitude;
+                    const long = position.coords.longitude;
                     
-                    x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+                    empLoc.latitude=lat;
+                    empLoc.longitude=long;
+                    
+                    console.log(empLoc);
+                    
+                    var locObj=JSON.stringify(empLoc);
+                    
+                    window.location="locValidation.php?location="+locObj;
         }
                 
         function showError(error) {
