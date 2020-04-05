@@ -19,7 +19,7 @@
             <center>
             <h1> You have sucessfully logedIn.</h1>
             <p>Click the button to mark your attendance.</p>
-            <button type="submit" class="btn btn-primary" name="btnLogin"onclick="getLocation()">Mark Attendance</button>
+            <button type="submit" class="btn btn-primary" name="btnLogin" onclick="getLocation()">Mark Attendance</button>
             <p id="demo"></p>
         </center>
         </div>
@@ -33,10 +33,14 @@
                     const lat  = position.coords.latitude;
                     const long = position.coords.longitude;
                     
+                    var today = new Date();
+                    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+                    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                    
                     empLoc.latitude=lat;
                     empLoc.longitude=long;
-                    
-                    console.log(empLoc);
+                    empLoc.date=date;
+                    empLoc.time=time;
                     
                     var locObj=JSON.stringify(empLoc);
                     
@@ -46,16 +50,16 @@
         function showError(error) {
             switch(error.code) {
                 case error.PERMISSION_DENIED:
-                    x.innerHTML = "User denied the request for Geolocation."
+                    alert("User denied the request for Geolocation.");
                 break;
                 case error.POSITION_UNAVAILABLE:
-                    x.innerHTML = "Location information is unavailable."
+                    alert("Location information is unavailable.");
                 break;
                 case error.TIMEOUT:
-                    x.innerHTML = "The request to get user location timed out."
+                    alert("The request to get user location timed out.");
                 break;
                 case error.UNKNOWN_ERROR:
-                    x.innerHTML = "An unknown error occurred."
+                    alert("An unknown error occurred.");
                 break;
       }
     }
