@@ -5,7 +5,7 @@
     {
         header('Location:./index.php');
     }
-    $id=$_SESSION['loginId'];
+    $id=$_POST['id'];
     
     $conn=mysqli_connect("localhost","root","","employee");
     if(!$conn){

@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Join Us</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+    
+    
+<body>
+    <center>
+    <form action="addEmp.php" method="post">
+        <div id="mainDiv">
+        <h2>Register</h2>
+        <table>
+        <tr>     
+            <td class="label"><a>First Name</a></td>
+            <td  class="field"><input type="text" pattern="[A-Za-z]{1,20}" name="Fname"></td>      
+        </tr>
+
+         <tr>     
+            <td class="label"><a>Last Name</a></td>
+            <td  class="field"><input type="text" name="Lname" pattern="[A-Za-z]{1,20}" required></td>      
+        </tr>
+            
+            <tr>     
+            <td class="label"><a>Gender</a></td>
+            <td  class="field"><input type="text" name="gender" pattern="{M,F}" required></td>      
+        </tr>
+            
+        <tr>     
+            <td class="label"><a>Email</a></td>
+            <td  class="field"><input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  required></td>      
+        </tr>
+            
+            <tr>     
+            <td class="label"><a>Mobile number</a></td>
+            <td  class="field"><input type="number" name="mobile" pattern="{1,10}" required></td>      
+        </tr>
+            
+            <tr>     
+            <td class="label"><a>Address</a></td>
+            <td  class="field"><input type="text" name="address" required></td>      
+        </tr>
+        
+         <tr>     
+            <td class="label"><a>Login I'd</a></td>
+            <td  class="field"><input type="text" name="Login" pattern="{1,20}" required></td>      
+        </tr>
+         
+        <tr>     
+            <td class="label"><a>Password</a></td>
+            <td  class="field"><input type="password" name="Passwd" required></td>      
+        </tr>
+        <tr>     
+            <td class="label"><a>Confirm Password</a></td>
+            <td  class="field"><input type="password" name="Cpasswd" required></td>      
+        </tr>
+         <tr>  
+             
+            <td>
+                <input type="submit" value="Submit" id="button"></td> 
+         <td><input type="reset" value="Reset" id="button"></td> 
+        </tr>
+         
+
+        </table>
+        
+        <div id="buttonDiv">
+        
+            
+        </div>
+    </div>
+        
+    </form>
+    
+    </center>
+    
+    
+    
+</body>
+</html>

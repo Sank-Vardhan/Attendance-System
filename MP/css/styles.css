@@ -1,0 +1,61 @@
+body{
+    
+    background-color: #272936;
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+#mainDiv{
+    
+    background-color: #34495E;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    
+}
+table{
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    border-color: none;
+    font-size: 15px;
+
+}
+
+input,textarea{
+    
+    border-color: white;
+    background-color: #303443;
+    color: white;
+   padding: 5 5 5 15;
+    margin: 10 10 10 40;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+#buttonDiv{
+    margin: 30px;
+}
+
+#button{
+
+    background-color: #3F5BD8;
+    padding: 15 40 15 40;
+    border-radius: 30px;
+    
+}
+
+#button:hover{
+
+    background-color: #FFFFFF;
+    color: #3F5BD8;
+   
+}
+
+.label{
+    text-align: center;
+}
+.field{
+    text-align: left;
+}

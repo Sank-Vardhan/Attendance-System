@@ -15,9 +15,12 @@
     $latitude=null;
     $longitude=null;
 
-    if($hour >= '20' && $hour<='21') 
-    { 
-        $status='Present'; 
+    if($hour >= '17' && $hour<='18') 
+    {
+        if($lat>=17 && $lat<=19 && $longi>=72 && $longi<=74){
+            $status='Present';
+        }
+         
     } 
     else
     { 
@@ -41,6 +44,15 @@ mysqli_close($conn);
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <style>
+            body{
+                background-image: url(images/d.jpg);
+                color: antiquewhite;
+            }
+            a{
+                color: antiquewhite;
+            }
+        </style>
     </head>
     <body>
         <a href="./show.php">Click to see your attendance</a><br>

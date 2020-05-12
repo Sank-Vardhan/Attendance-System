@@ -12,6 +12,15 @@
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <title>LogedIn</title>
+        <style>
+            body{
+                background-image: url(images/d.jpg);
+                color: antiquewhite;
+            }
+            a{
+                color: antiquewhite;
+            }
+        </style>
     </head>
     
     <body>
