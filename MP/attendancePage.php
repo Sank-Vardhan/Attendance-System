@@ -5,12 +5,12 @@
     {
         header('Location:./index.php');
     }
-    echo "Welcome ".$_SESSION['loginId']."_".$_SESSION['loginId1']."<br>";
+    echo "Welcome ".$_SESSION['loginId']."<br>";
 ?>
 
 <html>
     <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <title>LogedIn</title>
     </head>
     
@@ -36,11 +36,15 @@
                     var today = new Date();
                     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
                     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                    var hour=today.getHours();
+                    var min=today.getMinutes();
                     
                     empLoc.latitude=lat;
                     empLoc.longitude=long;
                     empLoc.date=date;
                     empLoc.time=time;
+                    empLoc.hour=hour;
+                    empLoc.min=min;
                     
                     var locObj=JSON.stringify(empLoc);
                     
@@ -68,6 +72,7 @@
         }
 }
         </script>
+        <a href="./show.php">Click to see your attendance.</a><br>
         <a href="./logout.php">Logout</a>
     </body>
 </html>
